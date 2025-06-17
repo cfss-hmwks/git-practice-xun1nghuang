@@ -9,6 +9,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 ```
 
 ## R Markdown
@@ -36,7 +37,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 Here, we're going to use tidyverse (which has ggplot2)
 
-```{r}
+```{r plot-cars}
 library(tidyverse)
 ggplot(mtcars)+ 
        geom_point(aes(x = mpg, y = wt, 
@@ -45,7 +46,7 @@ ggplot(mtcars)+
                       size = hp))+ 
                       #label = rownames(mtcars), check_overlap = TRUE) +
   theme_bw() +
-  scale_color_manual(values = c("black", "gray", "blue") ) +
+  scale_color_manual(values = c("coral1", "cyan1", "aquamarine2") ) +
   labs(title = "Car MPG vs weight", 
        x = 'Miles per gallon',
        y = 'Car weight',
